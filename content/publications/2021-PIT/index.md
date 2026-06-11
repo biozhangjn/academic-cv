@@ -34,8 +34,8 @@ publication:
   # issue: ""         # 新版要素：期刊期号
 
 # 新版要素：学术属性标识
-peer_reviewed: true
-open_access: true
+#peer_reviewed: true
+#open_access: true
 # license: CC-BY-4.0
 
 # Awards, honors, and recognitions. - 新版要素：获奖与荣誉徽章
@@ -86,5 +86,3 @@ projects: []
 # Slides (optional).
 # slides: ""
 ---
-
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including code, math, and images.

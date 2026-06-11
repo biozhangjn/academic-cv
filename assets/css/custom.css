@@ -1,0 +1,12 @@
+/* 取消 Hugo Blox 默认的桌面端左右分栏，强制改为上下排布 (Top-Bottom) */
+main > div.grid.md\:grid-cols-\[200px_auto\] {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important; /* 缩小标题和正文之间的上下间距 */
+    margin-bottom: 2.5rem !important; /* 增加与下方内容的呼吸感 */
+}
+
+/* 优化由 YAML 生成的标题（如 Abstract, Type）的字体样式，使其更贴近正文排版 */
+main > div.grid.md\:grid-cols-\[200px_auto\] > div:nth-child(odd) {
+    margin-bottom: 0 !important;
+    font-size: 1.5rem !important; /* 将默认过大的标题稍微调小，显得更精致 */
+}

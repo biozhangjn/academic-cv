@@ -38,7 +38,7 @@ publication:
   # issue: ""          # 新版要素：期刊期号
 
 # 新版要素：学术属性标识
-peer_reviewed: true
+#peer_reviewed: true
 open_access: false
 # license: CC-BY-NC-ND-4.0
 
@@ -98,5 +98,3 @@ projects: []
 # Slides (optional).
 # slides: ""
 ---
-
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including code, math, and images.
