@@ -39,10 +39,12 @@ cascade:
     profile: false
     share: false
     toc: true     # 强制为所有博客文章开启大纲目录
+
   - target:
       path: /projects/**
     profile: false
     share: false
+    
   - target:
       path: /courses/**
     type: book   # 强制将 courses 目录下的所有页面以书本/文档的样式渲染
