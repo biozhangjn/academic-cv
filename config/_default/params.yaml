@@ -13,19 +13,18 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   identity:
     # Site name - shown in navbar, footer, copyright, and browser title by default
-    name: "Your Name"
+    name: "Jiannan Zhang"
     # Legal entity for copyright notices (defaults to name if not set)
     organization: ""
     # Schema.org type for structured data
     type: person # person | organization | local_business
     # Short tagline displayed on your site
-    tagline: ""
+    tagline: "Note of ZJN"
     # Site meta description for search engines and social sharing
-    description: "The highly-customizable Hugo Academic theme powered by HugoBlox
-      Kit. Easily create your personal academic website."
+    description: ""
     # Social accounts (used for meta tags like Twitter Cards)
     social:
-      twitter: "GoOwnable" # Twitter/X handle for Twitter Cards (without @)
+      twitter: "" # Twitter/X handle for Twitter Cards (without @)
 
   # ────────────────────────────────────────────────────────────────────────────
   # THEME
@@ -119,7 +118,7 @@ hugoblox:
     license:
       type: cc # cc | custom
       allow_derivatives: false
-      share_alike: true
+      share_alike: false
       allow_commercial: false
 
   # ────────────────────────────────────────────────────────────────────────────
@@ -130,16 +129,16 @@ hugoblox:
     # Browser tab title override (defaults to identity.name if not set)
     title: ""
     # For local_business identity type only
-    location:
+    location: # 此处整合了旧版的地址坐标信息
       address:
-        street: ""
-        city: ""
-        region: ""
-        postal_code: ""
-        country: ""
+        street: "Sichuan University, No.24 South Section 1, Yihuan Road,"
+        city: "Chengdu"
+        region: "Sichuan"
+        postal_code: "610064"
+        country: "China"
       coordinates:
-        latitude: null
-        longitude: null
+        latitude: 30.631664
+        longitude: 104.086334
       phone: ""
     # AI/LLM crawler guidance (llms.txt)
     ai:
@@ -147,7 +146,7 @@ hugoblox:
         - /
       disallow: []
       note: "Guidance for AI crawlers - customize to match your public content."
-      contact: ""
+      contact: "biozhangjn@gmail.com" # 将旧版联系邮箱作为AI爬虫反馈触点
 
   # ────────────────────────────────────────────────────────────────────────────
   # CONTENT
@@ -199,7 +198,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   analytics:
     google:
-      measurement_id: "" # Google Analytics 4: G-XXXXXXXXXX
+      measurement_id: "G-MEF6ZLK7MH" # Google Analytics 4: G-XXXXXXXXXX
     google_tag_manager:
       container_id: "" # GTM-XXXXXXX
     plausible:

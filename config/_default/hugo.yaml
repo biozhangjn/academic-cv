@@ -6,7 +6,7 @@
 # Website name (set in params.yaml under hugoblox.branding.name)
 title: ''
 # Website URL
-baseURL: 'https://example.com/'
+baseURL: 'https://www.zhangjn.xyz/'
 
 ############################
 ## LANGUAGE
@@ -26,7 +26,28 @@ cascade:
       path: /slides/**
       kind: page
     outputs: [HTML, present]
+  - target:
+      path: /publications/**
+    profile: false
+    share: false
+    reading_time: false  # 隐藏文献副标题栏的阅读时间
 
+  - target:
+      path: /blog/**
+    profile: false
+    share: false
+    toc: true     # 强制为所有博客文章开启大纲目录
+  - target:
+      path: /projects/**
+    profile: false
+    share: false
+  - target:
+      path: /courses/**
+    type: book   # 强制将 courses 目录下的所有页面以书本/文档的样式渲染
+
+
+
+    
 ############################
 ## ADVANCED
 ############################
@@ -59,6 +80,9 @@ markup:
   _merge: deep
   highlight:
     lineNos: false
+  goldmark:
+    renderer:
+      unsafe: true
 security:
   _merge: deep
 sitemap:
