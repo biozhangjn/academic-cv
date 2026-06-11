@@ -31,6 +31,8 @@ cascade:
     profile: false
     share: false
     reading_time: false  # 隐藏文献副标题栏的阅读时间
+    show_cite: false     # 【新增】关闭 Cite 按钮，阻止预加载风暴
+    citation_enabled: false # 【新增】兼容备用字段
 
   - target:
       path: /blog/**
@@ -57,7 +59,7 @@ build:
 enableGitInfo: false
 summaryLength: 30
 pagination:
-  pagerSize: 50
+  pagerSize: 20
 enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
