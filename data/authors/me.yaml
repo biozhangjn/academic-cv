@@ -10,8 +10,8 @@ name:
   pronouns: ''
 postnominals:
   - PhD
-status:
-  icon: "🧬"
+#status:
+  #icon: "🧬"
 role: Associate Professor
 bio: |
   I am <strong>Jiannan Zhang (张剑南)</strong>, an Associate Professor in the College of Life Sciences at <strong>Sichuan University</strong>, conducting my research as a member of Professor <a href="http://life.scu.edu.cn/info/1048/1836.htm">Yajun Wang</a>'s laboratory.
