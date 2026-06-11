@@ -1,12 +1,92 @@
-/* 取消 Hugo Blox 默认的桌面端左右分栏，强制改为上下排布 (Top-Bottom) */
+/* ==========================================================================
+   1. 学术出版物单页 (Publications) 基础排版优化
+   ========================================================================== */
+
+/* 取消默认的桌面端左右分栏，强制改为上下排布 (Top-Bottom) */
 main > div.grid.md\:grid-cols-\[200px_auto\] {
     grid-template-columns: 1fr !important;
     gap: 0.5rem !important; /* 缩小标题和正文之间的上下间距 */
     margin-bottom: 2.5rem !important; /* 增加与下方内容的呼吸感 */
 }
 
-/* 优化由 YAML 生成的标题（如 Abstract, Type）的字体样式，使其更贴近正文排版 */
+/* 优化由 YAML 生成的标题（如 Abstract, Type, Publication）的视觉层级 */
 main > div.grid.md\:grid-cols-\[200px_auto\] > div:nth-child(odd) {
-    margin-bottom: 0 !important;
-    font-size: 1.5rem !important; /* 将默认过大的标题稍微调小，显得更精致 */
+    font-size: 1.25rem !important; /* 将默认过大的标题调小，避免喧宾夺主 */
+    color: #333333 !important; /* 加深标题颜色 */
+    margin-top: 0.5rem !important; /* 增加各元数据条目之间的上下间距 */
+    margin-bottom: 0.15rem !important; /* 标题与内容间保持紧密 */
+}
+
+/* 弱化元数据的具体内容（值），使其呈现次级信息的视觉感 */
+main > div.grid.md\:grid-cols-\[200px_auto\] > div:nth-child(even) {
+    color: #4b5563 !important; /* 采用稳重的次级灰色 */
+}
+
+/* ==========================================================================
+   2. 特色图片 (Featured Image) 及图注 (Caption) 优化
+   ========================================================================== */
+
+/* 限制大图比例并居中 */
+.featured-image-wrapper {
+    max-width: 75% !important; /* 缩小比例，避免占据全屏 */
+    margin: 2rem auto !important; /* 居中显示 */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */ /* 柔和阴影（已注释关闭） */
+    overflow: hidden;
+}
+
+/* 改造黑底图注为标准学术说明文字 */
+.featured-image-wrapper .article-header-caption {
+    position: relative !important;
+    background: transparent !important; /* 去除黑底 */
+    color: #555555 !important; /* 高辨识度的学术灰 */
+    text-align: center !important;
+    padding: 12px 10px 2rem 10px !important; /* 底部增加 2rem 留白，拉开与下方文本的距离 */
+    font-size: 0.95rem !important;
+    width: 100% !important;
+    /* border-top: 1px solid #eee; */ /* 细分隔线（已注释关闭） */
+}
+
+/* ==========================================================================
+   3. 首页卡片视图 (Card/Portfolio) 缩略图防裁剪优化
+   ========================================================================== */
+/* 拦截最新版主题的 object-fill 类名，强制改为完整按比例包含 (contain) */
+img.object-fill,
+#papers img {
+    object-fit: contain !important; /* 核心：保证全图按比例缩小显示，绝不裁剪或拉伸 */
+    background-color: #ffffff !important; /* 补充纯白底板，防止透明通道图片在暗黑模式出问题 */
+    padding: 0.5rem !important; /* 给四周留出一点呼吸空间，不至于紧贴边框 */
+}
+
+/* ==========================================================================
+   4. 出版物列表 (Publications) 自动生成文献序号
+   ========================================================================== */
+
+/* 在页面主体初始化计数器 */
+.page-body {
+    counter-reset: pub-num;
+}
+
+/* 隐藏主题自带的文档小图标，为序号腾出纯净空间 */
+.view-citation .pub-icon {
+    display: none !important;
+}
+
+/* 针对每个文献条目：留出左侧空间，并触发计数器累加 */
+.view-citation {
+    position: relative;
+    padding-left: 2.2rem !important; /* 为左侧的 [10] 等两位数序号预留充足空间 */
+    counter-increment: pub-num;
+}
+
+/* 在条目左侧绝对定位插入序号 */
+.view-citation::before {
+    content: "[" counter(pub-num) "]"; /* 渲染格式为 [1], [2] */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #4b5563; /* 稳重的学术灰，不抢正文风头 */
+    font-weight: 600; /* 稍微加粗提高辨识度 */
+    font-size: 0.95em;
+    line-height: inherit; /* 与第一行文字自然对齐 */
 }

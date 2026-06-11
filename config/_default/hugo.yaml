@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Website name (set in params.yaml under hugoblox.branding.name)
-title: ''
+title: 'Jiannan Zhang'
 # Website URL
 baseURL: 'https://www.zhangjn.xyz/'
 
@@ -13,7 +13,7 @@ baseURL: 'https://www.zhangjn.xyz/'
 ############################
 
 defaultContentLanguage: en
-hasCJKLanguage: false
+hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
 removePathAccents: true
 
@@ -57,7 +57,7 @@ build:
 enableGitInfo: false
 summaryLength: 30
 pagination:
-  pagerSize: 10
+  pagerSize: 50
 enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
@@ -79,7 +79,7 @@ taxonomies:
 markup:
   _merge: deep
   highlight:
-    lineNos: false
+    lineNos: true
   goldmark:
     renderer:
       unsafe: true

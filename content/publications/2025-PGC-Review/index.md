@@ -39,7 +39,7 @@ issue: 19
 # 新版要素：学术属性标识
 #peer_reviewed: true
 open_access: true
-license: CC-BY-4.0
+#license: CC-BY-4.0
 
 # Awards, honors, and recognitions. - 新版要素：获奖与荣誉徽章
 # awards:
