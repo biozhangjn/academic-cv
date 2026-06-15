@@ -34,7 +34,7 @@ bio: |
   </li>
   <li style="display: flex; align-items: flex-start; margin-bottom: 0.5rem;">
   <span style="color: #374151; margin-right: 0.6rem; font-size: 1.2rem;">&bull;</span>
-  <span style="color: #4b5563;">Genome editing of Chicken</span>
+  <span style="color: #4b5563;">Genome Editing of Chicken</span>
   </li>
   </ul>
   </div>
@@ -93,7 +93,7 @@ links:
 #interests:
   #- Avian Physiology
   #- Endocrinology and Metabolism
-  #- Genome editing of Chicken
+  #- Genome Editing of Chicken
 
 #education:
   - degree: Post-doc in Poultry Genetics and Breeding
